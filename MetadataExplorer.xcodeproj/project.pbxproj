@@ -12,6 +12,9 @@
 		1275400F284A6A7D0082B208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1275400E284A6A7D0082B208 /* Assets.xcassets */; };
 		12754012284A6A7D0082B208 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12754011284A6A7D0082B208 /* Preview Assets.xcassets */; };
 		1275401A284A6D080082B208 /* MetadataRetrieval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12754019284A6D080082B208 /* MetadataRetrieval.swift */; };
+		1275401C284A71D20082B208 /* MetadataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1275401B284A71D20082B208 /* MetadataStore.swift */; };
+		1275401E284A73440082B208 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1275401D284A73440082B208 /* Metadata.swift */; };
+		12754022284A787C0082B208 /* String+RegExSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12754021284A787C0082B208 /* String+RegExSplit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		12754011284A6A7D0082B208 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		12754013284A6A7D0082B208 /* MetadataExplorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetadataExplorer.entitlements; sourceTree = "<group>"; };
 		12754019284A6D080082B208 /* MetadataRetrieval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataRetrieval.swift; sourceTree = "<group>"; };
+		1275401B284A71D20082B208 /* MetadataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataStore.swift; sourceTree = "<group>"; };
+		1275401D284A73440082B208 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
+		12754021284A787C0082B208 /* String+RegExSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RegExSplit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +60,11 @@
 		12754009284A6A7B0082B208 /* MetadataExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				12754021284A787C0082B208 /* String+RegExSplit.swift */,
 				1275400A284A6A7B0082B208 /* MetadataExplorerApp.swift */,
 				12754019284A6D080082B208 /* MetadataRetrieval.swift */,
+				1275401B284A71D20082B208 /* MetadataStore.swift */,
+				1275401D284A73440082B208 /* Metadata.swift */,
 				1275400C284A6A7B0082B208 /* ContentView.swift */,
 				1275400E284A6A7D0082B208 /* Assets.xcassets */,
 				12754013284A6A7D0082B208 /* MetadataExplorer.entitlements */,
@@ -142,9 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1275401C284A71D20082B208 /* MetadataStore.swift in Sources */,
 				1275400D284A6A7B0082B208 /* ContentView.swift in Sources */,
+				1275401E284A73440082B208 /* Metadata.swift in Sources */,
 				1275401A284A6D080082B208 /* MetadataRetrieval.swift in Sources */,
 				1275400B284A6A7B0082B208 /* MetadataExplorerApp.swift in Sources */,
+				12754022284A787C0082B208 /* String+RegExSplit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +290,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +318,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
