@@ -11,6 +11,16 @@ struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .onAppear {
+                DispatchQueue.main.async {
+                    let openPanel = NSOpenPanel()
+                    openPanel.canChooseFiles = true
+                    openPanel.runModal()
+                    if let url = openPanel.url {
+                        MetadataRetrieval(url: url).retrieve()
+                    }
+                }
+            }
     }
 }
 
