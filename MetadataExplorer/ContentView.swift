@@ -17,8 +17,19 @@ struct ContentView: View {
                     Spacer()
                         .frame(height: 16)
                     ForEach(store.data) { item in
-                        Cell(item: item)
-                            .frame(width: geoProxy.size.width * 0.9)
+                        Button {
+                            if let firstValue = item.values.first {
+                                NSPasteboard.general.clearContents()
+                                let contents = item.values.count > 1 ? item.values.joined(separator: ", ") : firstValue
+                                NSPasteboard.general.setString("\(item.id): \(contents)",
+                                                               forType: .string)
+                            }
+                        } label: {
+                            Cell(item: item)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .frame(width: geoProxy.size.width * 0.9)
+
                     }
                     Spacer()
                         .frame(height: 16)

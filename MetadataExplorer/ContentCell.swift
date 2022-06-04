@@ -29,30 +29,26 @@ struct Cell: View {
                     .font(.system(size: 15, weight: .semibold, design: .rounded))
                     .foregroundColor(.accentColor)
                     .fixedSize(horizontal: false, vertical: true)
-                    .textSelection(.enabled)
                     .padding(.vertical, 4)
                     .padding(.horizontal, 8)
-                    .background {
+                    .background(
                         RoundedRectangle(cornerRadius: 8, style: .continuous)
                             .strokeBorder(Color.accentColor, lineWidth: 2)
-                    }
+                    )
                     .padding(.vertical, 2)
             }
             
         }
         .padding()
-        .background {
+        .background (
             ZStack {
-                
                 RoundedRectangle(cornerRadius: 15)
-                .fill(.background)
+                    .fill(colorScheme == .dark ? Color(NSColor.underPageBackgroundColor) : Color.white)
                 RoundedRectangle(cornerRadius: 15)
                     .strokeBorder(colorScheme == .dark ? Color(white: 0.5) : Color(white: 0.95), lineWidth: 1)
             }
             .shadow(color: .black.opacity(0.05), radius: 6, x: 0, y: 4)
-        }
-        
-        
+        )
         
     }
 
