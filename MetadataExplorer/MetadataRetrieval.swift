@@ -28,8 +28,9 @@ class MetadataRetrieval {
             switch value {
             case is String:
                 metadatas.append(Metadata(key: key, values: [value as! String]))
-            case is [String]:
-                metadatas.append(Metadata(key: key, values: value as! [String]))
+            case is [Any]:
+                let anyValues = value as! [Any]
+                metadatas.append(Metadata(key: key, values: anyValues.map({String(describing: $0)})))
             default:
                 let stringify = String(describing: value)
                 metadatas.append(Metadata(key: key, values: [stringify]))

@@ -13,6 +13,7 @@ struct MetadataExplorerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(store: store)
+                .frame(minWidth: 400, minHeight: 250)
                 .onAppear {
                     DispatchQueue.main.async {
                         let openPanel = NSOpenPanel()

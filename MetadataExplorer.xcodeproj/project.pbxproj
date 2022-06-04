@@ -15,6 +15,8 @@
 		1275401C284A71D20082B208 /* MetadataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1275401B284A71D20082B208 /* MetadataStore.swift */; };
 		1275401E284A73440082B208 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1275401D284A73440082B208 /* Metadata.swift */; };
 		12754022284A787C0082B208 /* String+RegExSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12754021284A787C0082B208 /* String+RegExSplit.swift */; };
+		12C3DEFE284B7E8B00893B1A /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C3DEFD284B7E8B00893B1A /* ContentCell.swift */; };
+		12C3DF00284BB1CF00893B1A /* WrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C3DEFF284BB1CF00893B1A /* WrappingHStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		1275401B284A71D20082B208 /* MetadataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataStore.swift; sourceTree = "<group>"; };
 		1275401D284A73440082B208 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
 		12754021284A787C0082B208 /* String+RegExSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RegExSplit.swift"; sourceTree = "<group>"; };
+		12C3DEFD284B7E8B00893B1A /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		12C3DEFF284BB1CF00893B1A /* WrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingHStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				12754021284A787C0082B208 /* String+RegExSplit.swift */,
+				12C3DEFF284BB1CF00893B1A /* WrappingHStack.swift */,
 				1275400A284A6A7B0082B208 /* MetadataExplorerApp.swift */,
 				12754019284A6D080082B208 /* MetadataRetrieval.swift */,
 				1275401B284A71D20082B208 /* MetadataStore.swift */,
 				1275401D284A73440082B208 /* Metadata.swift */,
 				1275400C284A6A7B0082B208 /* ContentView.swift */,
+				12C3DEFD284B7E8B00893B1A /* ContentCell.swift */,
 				1275400E284A6A7D0082B208 /* Assets.xcassets */,
 				12754013284A6A7D0082B208 /* MetadataExplorer.entitlements */,
 				12754010284A6A7D0082B208 /* Preview Content */,
@@ -152,9 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1275401C284A71D20082B208 /* MetadataStore.swift in Sources */,
+				12C3DEFE284B7E8B00893B1A /* ContentCell.swift in Sources */,
 				1275400D284A6A7B0082B208 /* ContentView.swift in Sources */,
 				1275401E284A73440082B208 /* Metadata.swift in Sources */,
 				1275401A284A6D080082B208 /* MetadataRetrieval.swift in Sources */,
+				12C3DF00284BB1CF00893B1A /* WrappingHStack.swift in Sources */,
 				1275400B284A6A7B0082B208 /* MetadataExplorerApp.swift in Sources */,
 				12754022284A787C0082B208 /* String+RegExSplit.swift in Sources */,
 			);

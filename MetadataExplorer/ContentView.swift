@@ -11,27 +11,17 @@ struct ContentView: View {
     @ObservedObject var store: MetadataStore
     
     var body: some View {
-        LazyVStack {
-            ForEach(store.data) { item in
-                Cell(item: item)
-            }
-        }
-        .frame(minHeight: 200)
-    }
-}
-
-struct Cell: View {
-    let item: Metadata
-    
-    var body: some View {
-        HStack(alignment: .firstTextBaseline) {
-            VStack {
-                Text(item.readableName)
-                Spacer()
-            }
-            VStack {
-                ForEach(item.values, id: \.self) { value in
-                    Text(value)
+        GeometryReader { geoProxy in
+            ScrollView {
+                LazyVStack {
+                    Spacer()
+                        .frame(height: 16)
+                    ForEach(store.data) { item in
+                        Cell(item: item)
+                            .frame(width: geoProxy.size.width * 0.9)
+                    }
+                    Spacer()
+                        .frame(height: 16)
                 }
             }
         }

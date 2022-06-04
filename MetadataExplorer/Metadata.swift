@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Metadata: Identifiable {
+struct Metadata: Identifiable, Hashable {
     let id: String // key
     let readableName: String
     let values: [String]
@@ -15,7 +15,7 @@ struct Metadata: Identifiable {
     init(key: String, values: [String]) {
         self.id = key
         // https://stackoverflow.com/a/7599674
-        let splitedKey = key.split(usingRegex: #"(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])"#).dropFirst(3)
+        let splitedKey = key.split(usingRegex: #"(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|_"#).dropFirst(3)
         self.readableName = splitedKey.joined(separator: " ")
         self.values = values
     }
